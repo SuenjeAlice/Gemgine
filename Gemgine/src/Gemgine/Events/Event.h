@@ -1,9 +1,6 @@
 #pragma once
-
+#include "ggpch.h"
 #include "Gemgine/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Gemgine {
 

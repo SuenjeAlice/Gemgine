@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Gemgine {
 	
 	class GEMGINE_API MouseMovedEvent : public Event

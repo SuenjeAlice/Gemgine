@@ -18,6 +18,9 @@ project "Gemgine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "ggpch.h"
+	pchsource "Gemgine/src/ggpch.h"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

@@ -34,6 +34,7 @@
     <ClInclude Include="src\Gemgine\Log.h">
       <Filter>Gemgine</Filter>
     </ClInclude>
+    <ClInclude Include="src\ggpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gemgine\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Gemgine\Log.cpp">
       <Filter>Gemgine</Filter>
     </ClCompile>
+    <ClCompile Include="src\ggpch.cpp" />
   </ItemGroup>
 </Project>
