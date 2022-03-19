@@ -4,6 +4,9 @@
     <Filter Include="Gemgine">
       <UniqueIdentifier>{A135AE50-0D15-2DEC-162D-B8C2828B934D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Gemgine\Events">
+      <UniqueIdentifier>{6522DD02-51F0-D008-3A84-412F26F1AC6D}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Gemgine.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Gemgine\EntryPoint.h">
       <Filter>Gemgine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gemgine\Events\ApplicationEvent.h">
+      <Filter>Gemgine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gemgine\Events\Event.h">
+      <Filter>Gemgine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gemgine\Events\KeyEvent.h">
+      <Filter>Gemgine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gemgine\Events\MouseEvent.h">
+      <Filter>Gemgine\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Gemgine\Log.h">
       <Filter>Gemgine</Filter>
