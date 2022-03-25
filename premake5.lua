@@ -10,6 +10,12 @@ workspace "Gemgine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Gemgine/vendor/GLFW/include"
+
+include "Gemgine/vendor/GLFW"
+
 project "Gemgine"
 	location "Gemgine"
 	kind "SharedLib"
@@ -19,7 +25,7 @@ project "Gemgine"
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "ggpch.h"
-	pchsource "Gemgine/src/ggpch.h"
+	pchsource "Gemgine/src/ggpch.cpp"
 
 	files
 	{
@@ -30,8 +36,16 @@ project "Gemgine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
 	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
+	}
+
 
 	filter "system:windows"
 		cppdialect "C++17"

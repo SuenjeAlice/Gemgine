@@ -7,6 +7,12 @@
     <Filter Include="Gemgine\Events">
       <UniqueIdentifier>{6522DD02-51F0-D008-3A84-412F26F1AC6D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Gemgine.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\Gemgine\Log.h">
       <Filter>Gemgine</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gemgine\Window.h">
+      <Filter>Gemgine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\ggpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Gemgine\Log.cpp">
       <Filter>Gemgine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\ggpch.cpp" />
   </ItemGroup>
