@@ -65,14 +65,17 @@ project "Gemgine"
 	
 	filter "configurations:Debug"
 		defines "GG_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "GG_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "GG_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -112,12 +115,15 @@ project "Sandbox"
 	
 	filter "configurations:Debug"
 		defines "GG_DEBUG"
+		buildoptions "/MD"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "GG_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "GG_DIST"
+		buildoptions "/MD"
 		optimize "On"
