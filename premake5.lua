@@ -115,7 +115,7 @@ project "Sandbox"
 	
 	filter "configurations:Debug"
 		defines "GG_DEBUG"
-		buildoptions "/MD"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
