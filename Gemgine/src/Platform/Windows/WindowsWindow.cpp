@@ -120,6 +120,7 @@ namespace Gemgine {
 
 		});
 
+		//Scroll Event
 		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xOffset, double yOffset)
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
