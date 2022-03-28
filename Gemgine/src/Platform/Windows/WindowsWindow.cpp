@@ -6,28 +6,34 @@
 #include "Gemgine/Events/ApplicationEvent.h"
 
 namespace Gemgine {
+	//set GLFWInitialized to false
 	static bool s_GLFWInitialized = false;
 
+	//GLFWErrorCallback
 	static void GLFWErrorCallback(int error, const char* description)
 	{
 		GG_CORE_ERROR("GLFW Error ({0}): {1}", error, description);
 	}
 
+	//Creates a new WindowsWindow
 	Window* Window::Create(const WindowProps& props)
 	{
 		return new WindowsWindow(props);
 	}
 
+	//Constructor to initialise Window
 	WindowsWindow::WindowsWindow(const WindowProps& props)
 	{
 		Init(props);
 	}
 
+	//Destructor of WindowsWindow to Shutdown Window
 	WindowsWindow::~WindowsWindow()
 	{
 		Shutdown();
 	}
 
+	//Initilisiation function to set Title, Width, Height, initialise GLFW, create window and set GLFW callbacks
 	void WindowsWindow::Init(const WindowProps& props)
 	{
 		m_Data.Title = props.Title;
@@ -36,6 +42,7 @@ namespace Gemgine {
 
 		GG_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
+		//Checks if GLFW is initialised, it only initialises GLFW once
 		if (!s_GLFWInitialized)
 		{
 			// TODO: glfwTerminate on system shutdown 
@@ -45,12 +52,15 @@ namespace Gemgine {
 			s_GLFWInitialized = true;
 		}
 
+		//Creates window
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
 		// Set GLFW callbacks
+
+		//GLFW callback to set Window Size
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height) 
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
@@ -62,6 +72,7 @@ namespace Gemgine {
 			data.EventCallback(event);
 		});
 
+		//GLFW callback for Window Close
 		glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
 		{
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
@@ -69,10 +80,12 @@ namespace Gemgine {
 				data.EventCallback(event);
 		});
 
+		//GLFW callback for keys
 		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
 		{
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
+				//switch statement for key press, key release and key repeat
 				switch (action)
 				{
 					case GLFW_PRESS:
@@ -97,10 +110,12 @@ namespace Gemgine {
 				}
 		});
 
+		//GLFW Callback for MouseButtons
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods)
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
+			//switch statement for button press & button release
 			switch (action)
 			{
 				case GLFW_PRESS:
@@ -120,7 +135,7 @@ namespace Gemgine {
 
 		});
 
-		//Scroll Event
+		//GLFW callback for Scroll Event
 		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xOffset, double yOffset)
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
@@ -129,6 +144,7 @@ namespace Gemgine {
 			data.EventCallback(event);
 		});
 
+		//GLFW callback for cursor position
 		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xPos, double yPos)
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
@@ -139,17 +155,20 @@ namespace Gemgine {
 
 	}
 
+	//Shutdown function to destroy window
 	void WindowsWindow::Shutdown()
 	{
 		glfwDestroyWindow(m_Window);
 	}
 
+	//OnUpdate to poll events and swap buffers
 	void WindowsWindow::OnUpdate()
 	{
 		glfwPollEvents();
 		glfwSwapBuffers(m_Window);
 	}
 
+	//SetVSync function
 	void WindowsWindow::SetVSync(bool enabled)
 	{
 		if (enabled)
@@ -160,6 +179,7 @@ namespace Gemgine {
 		m_Data.VSync = enabled;
 	}
 
+	//IsVSyn function
 	bool WindowsWindow::IsVSync() const
 	{
 		return m_Data.VSync;

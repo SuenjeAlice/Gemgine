@@ -7,6 +7,7 @@
 
 namespace Gemgine {
 
+	//WindowProps struct with Title, Width and Height as well as a default for title, width and height
 	struct WindowProps
 	{
 		std::string Title;
@@ -29,6 +30,7 @@ public:
 
 	virtual ~Window() {}
 
+	//abstract class - pure virtual functions
 	virtual void OnUpdate() = 0;
 	
 	virtual unsigned int GetWidth() const = 0;
@@ -39,6 +41,7 @@ public:
 	virtual void SetVSync(bool enabled) = 0;
 	virtual bool IsVSync() const = 0;
 	
+	//Create function 
 	static Window* Create(const WindowProps& props = WindowProps());
 };
 

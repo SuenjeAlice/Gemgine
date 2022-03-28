@@ -23,7 +23,7 @@ namespace Gemgine{
 		bool m_Running = true;
 	};
 
-	//To be define in CLIENT
+	//To be defined in CLIENT
 	Application* CreateApplication();
 
 }

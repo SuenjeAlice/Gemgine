@@ -8,7 +8,6 @@ namespace Gemgine {
 	//Buffer events might be better for the future
 
 	//Describes Event types
-	//Uses enum class because
 	enum class EventType
 	{
 		None = 0,
@@ -19,7 +18,7 @@ namespace Gemgine {
 	};
 
 	//categories to make filtering events possible
-	//uses only enum because
+	//uses only enum instead of enum class because BIT function doesn't work with enum class
 	enum EventCategory
 	{
 		None = 0,
@@ -31,16 +30,20 @@ namespace Gemgine {
 
 	};
 
+//define EVENT_CLASS_TYPE macro to easily assign the type of event 
 #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type;}\
                                 virtual EventType GetEventType() const override { return GetStaticType(); }\
                                 virtual const char* GetName() const override {return #type; }
-
+//define EVENT_CLASS_CATEGORY macro to easily assign the category of event 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override {return category; }
 
+	//Event class which is an abstract class that is inherited by ApplicationEvent, KeyEvent, MouseEvent
 	class GEMGINE_API Event
 	{
+		//friend class EventDispatcher, can access protected and private members
 		friend class EventDispatcher;
 	public:
+		//Interface - uses pure virtual functions
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;
@@ -54,6 +57,7 @@ namespace Gemgine {
 		bool m_Handled = false;
 	};
 
+	//EventDispatcher class 
 	class EventDispatcher
 	{
 		template<typename T>

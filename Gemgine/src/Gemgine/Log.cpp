@@ -5,11 +5,14 @@
 
 namespace Gemgine {
 
+	//Client and CoreLogger
 	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
 	std::shared_ptr<spdlog::logger> Log::s_ClientLogger;
 
+	//Initialises Log
 	void Log::Init()
 	{
+		//Set pattern, color and level for Core and Client Logger
 		spdlog::set_pattern("%^[%T] %n: %v%$");
 		s_CoreLogger = spdlog::stdout_color_mt("GEMGINE");
 		s_CoreLogger->set_level(spdlog::level::trace);

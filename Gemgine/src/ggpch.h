@@ -1,5 +1,6 @@
 #pragma once
 
+//uses precompiled header to speed up build process
 #include <iostream>
 #include <memory>
 #include <utility>

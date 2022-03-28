@@ -6,6 +6,7 @@
 
 namespace Gemgine {
 
+	//WindowsWindow inherits from Window
 	class WindowsWindow : public Window
 	{
 	public:
@@ -24,9 +25,10 @@ namespace Gemgine {
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();
-	private:
+	
 		GLFWwindow* m_Window;
 		
+		//WindowData struct for Title, Width, Height, VSync & EventCallbackFn
 		struct WindowData
 		{
 			std::string Title;
