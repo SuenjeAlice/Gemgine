@@ -57,7 +57,7 @@ namespace Gemgine {
 		bool m_Handled = false;
 	};
 
-	//EventDispatcher class 
+	//EventDispatcher class is used to dispatch events
 	class EventDispatcher
 	{
 		template<typename T>
@@ -69,6 +69,7 @@ namespace Gemgine {
 
 		}
 
+		//uses template to handle all types of events
 		template<typename T>
 		bool Dispatch(EventFn<T> func)
 		{
