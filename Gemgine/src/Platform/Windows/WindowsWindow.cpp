@@ -153,6 +153,23 @@ namespace Gemgine {
 			data.EventCallback(event);
 		});
 
+		//GLFW callback for Window position
+		glfwSetWindowPosCallback(m_Window, [](GLFWwindow* window, int xPos, int yPos)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+
+			WindowMovedEvent event(xPos, yPos);
+			data.EventCallback(event);
+		});
+
+		//GLFW callback for focus
+		glfwSetWindowFocusCallback(m_Window, [](GLFWwindow* window, int focus)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+
+			WindowFocusEvent event(focus);
+			data.EventCallback(event);
+		});
 	}
 
 	//Shutdown function to destroy window

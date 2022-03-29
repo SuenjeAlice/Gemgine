@@ -67,6 +67,8 @@ You can trigger these events, they are dispatched and handled and logged to the 
     - Application Events
         - Window Resize Event
         - Window Close Event
+        - Window Moved Event
+        - Window Focus Event
     - Key Events
         - Key Pressed Event
         - Key Released Event
@@ -83,6 +85,10 @@ You can trigger these events, they are dispatched and handled and logged to the 
 
 ### Utilities Used
 - Premake5 for build configuration
+
+## Extra things added outside of Tutorial
+- Functionality/Logging for Window Moved Event
+- Functionality/Logging for Window Focus Event
 
 ## Releases
 [Latest DLL](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/Gemgine.dll)  
