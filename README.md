@@ -85,7 +85,7 @@ You can trigger these events, they are dispatched and handled and logged to the 
 - Premake5 for build configuration
 
 ## Releases
-[Latest](https://github.com/SuenjeAlice/Gemgine/releases/tag/latest)  
-[Latest Source Code](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/latest.zip)  
 [Latest DLL](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/Gemgine.dll)  
 [Latest Demo](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/Sandbox.exe)   
+
+Check the releases tab for more releases.
