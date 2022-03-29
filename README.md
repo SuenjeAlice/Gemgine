@@ -1,5 +1,5 @@
-# Gemgine - Engine Architecture and Design Engine Project - Sünje Winteler ai21m038
-Gemgine Engine was created using the Hazel Engine Tutorial by The Cherno.
+# Gemgine - Engine Architecture and Design - Engine Project - Sünje Winteler ai21m038
+Gemgine Engine was created using the Hazel Engine Tutorial by [The Cherno](https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT).
 
 
 ## How To Run Gemgine
@@ -58,3 +58,28 @@ You can also create a Makefile, instead of IDE_HERE us:
 - 'gmake2'
 
 ## What can you do with the Gemgine Engine?
+
+### Functionality
+- Log Information
+- Events 
+You can trigger these events, they are dispatched and handled and logged to the console:
+    - Application Events
+        - Window Resize Event
+        - Window Close Event
+    - Key Events
+        - Key Pressed Event
+        - Key Released Event
+    - Mouse Events
+        - Mouse Moved Event
+        - Mouse Scrolled Event
+        - Mouse Button Pressed Event
+        - Mouse Button Released Event
+- Window Creation
+
+### Libaries Used
+- spdlog library for logging
+- GLFW library for graphics
+
+### Utilities Used
+- Premake5 for build configuration
+
