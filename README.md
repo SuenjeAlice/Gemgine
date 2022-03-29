@@ -5,7 +5,8 @@ Gemgine Engine was created using the Hazel Engine Tutorial by [The Cherno](https
 ## How To Run Gemgine
 
 ### Download Demo Version
-Check out the demo version by going to the release tab on Github and downloading the latest version of Gemgine.dll and Sandbox.exe.  
+Check out the demo version by going to the release tab on Github and downloading the latest version of Gemgine.dll and Sandbox.exe. 
+Or download the releases at the bottom of this documentation, download the DLL and the Demo.   
 Make sure they are in the same folder. To run the demo simply double click Sandbox.exe.
 
 ### Use Gemgine Engine as you Game Engine
@@ -83,3 +84,13 @@ You can trigger these events, they are dispatched and handled and logged to the 
 ### Utilities Used
 - Premake5 for build configuration
 
+## Releases
+[Latest]https://github.com/SuenjeAlice/Gemgine/releases/tag/latest)
+[Latest Source Code](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/latest.zip)
+[Latest DLL](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/Gemgine.dll)
+[Latest Demo](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/Sandbox.exe)  
+  
+[V1.0.0](https://github.com/SuenjeAlice/Gemgine/releases/tag/v1.0.0)
+[V1.0.0 Source Code](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/v1.0.0.zip)
+[V1.0.0 DLL](https://github.com/SuenjeAlice/Gemgine/releases/v1.0.0/download/Gemgine.dll)
+[V1.0.0 Demo](https://github.com/SuenjeAlice/Gemgine/releases/v1.0.0/download/Sandbox.exe)
