@@ -85,12 +85,7 @@ You can trigger these events, they are dispatched and handled and logged to the 
 - Premake5 for build configuration
 
 ## Releases
-[Latest]https://github.com/SuenjeAlice/Gemgine/releases/tag/latest)
-[Latest Source Code](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/latest.zip)
-[Latest DLL](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/Gemgine.dll)
-[Latest Demo](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/Sandbox.exe)  
-  
-[V1.0.0](https://github.com/SuenjeAlice/Gemgine/releases/tag/v1.0.0)
-[V1.0.0 Source Code](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/v1.0.0.zip)
-[V1.0.0 DLL](https://github.com/SuenjeAlice/Gemgine/releases/v1.0.0/download/Gemgine.dll)
-[V1.0.0 Demo](https://github.com/SuenjeAlice/Gemgine/releases/v1.0.0/download/Sandbox.exe)
+[Latest](https://github.com/SuenjeAlice/Gemgine/releases/tag/latest)  
+[Latest Source Code](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/latest.zip)  
+[Latest DLL](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/Gemgine.dll)  
+[Latest Demo](https://github.com/SuenjeAlice/Gemgine/releases/latest/download/Sandbox.exe)   
