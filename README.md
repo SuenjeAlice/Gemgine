@@ -5,11 +5,11 @@ Gemgine Engine was created using the Hazel Engine Tutorial by [The Cherno](https
 ## How To Run Gemgine
 
 ### Download Demo Version
-Check out the demo version by going to the release tab on Github and downloading the latest version of Gemgine.dll and Sandbox.exe.
+Check out the demo version by going to the release tab on Github and downloading the latest version of Gemgine.dll and Sandbox.exe.  
 Make sure they are in the same folder. To run the demo simply double click Sandbox.exe.
 
 ### Use Gemgine Engine as you Game Engine
-To use the Gemgine Engine as your Game Engine go to the release tab on Github and download the latest version of Gemgine.dll. You can write your own game. You have to bind the Gemgine.dll file into your own project.
+To use the Gemgine Engine as your Game Engine go to the release tab on Github and download the latest version of Gemgine.dll. You can write your own game. You have to bind the Gemgine.dll file into your own project.  
 Check out this simple example for our demo:
 
 ```
@@ -37,7 +37,7 @@ Gemgine::Application* Gemgine::CreateApplication()
 ```
 
 ### How to work on Gemgine Engine yourself
-Download the source code from Github. Click the 'GenerateProject.bat' file to generate a project solution in Visual Studio 2022.
+Download the source code from Github. Click the 'GenerateProject.bat' file to generate a project solution in Visual Studio 2022.  
 Alternatively, you can generate project solutions in a different IDE by typing the following code into your command window (be aware, you have to be in the same folder where the 'GenerateProject.bat' file sits):
 
 ```
@@ -61,7 +61,7 @@ You can also create a Makefile, instead of IDE_HERE us:
 
 ### Functionality
 - Log Information
-- Events 
+- Events  
 You can trigger these events, they are dispatched and handled and logged to the console:
     - Application Events
         - Window Resize Event
