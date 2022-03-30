@@ -41,7 +41,7 @@ Gemgine::Application* Gemgine::CreateApplication()
 Clone the the repository from Github using the following git command:
 
 ```
-git clone --recursive [https://github.com/SuenjeAlice/Gemgine.git](https://github.com/SuenjeAlice/Gemgine.git)
+git clone --recursive https://github.com/SuenjeAlice/Gemgine.git
 ```
 Be sure to include the '--recursive' part to ensure that the submodules for the spdlog library and GLFW library are correctly included in the repository.    
 Click the 'GenerateProject.bat' file to generate a project solution in Visual Studio 2022.  
