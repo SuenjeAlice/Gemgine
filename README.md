@@ -38,7 +38,13 @@ Gemgine::Application* Gemgine::CreateApplication()
 ```
 
 ### How to work on Gemgine Engine yourself
-Download the source code from Github. Click the 'GenerateProject.bat' file to generate a project solution in Visual Studio 2022.  
+Clone the the repository from Github using the following git command:
+
+```
+git clone --recursive [https://github.com/SuenjeAlice/Gemgine.git](https://github.com/SuenjeAlice/Gemgine.git)
+```
+Be sure to include the '--recursive' part to ensure that the submodules for the spdlog library and GLFW library are correctly included in the repository.    
+Click the 'GenerateProject.bat' file to generate a project solution in Visual Studio 2022.  
 Alternatively, you can generate project solutions in a different IDE by typing the following code into your command window (be aware, you have to be in the same folder where the 'GenerateProject.bat' file sits):
 
 ```
@@ -54,9 +60,11 @@ Instead of IDE_HERE use the IDE you want:
 - 'codelite' for CodeLite
 - 'xcode4' for Apple Xcode 4
 
-You can also create a Makefile, instead of IDE_HERE us:
+You can also create a Makefile, instead of IDE_HERE use:
 - 'gmake' 
 - 'gmake2'
+
+Then click on the solution file and work away!
 
 ## What can you do with the Gemgine Engine?
 
